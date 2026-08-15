@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Risk Map — Meridian Ridge Demo | Brownell Energy Law</title>
+  <meta name="description" content="Demonstration one-page risk visualization for the fictional Meridian Ridge Solar PPA review: ten issues plotted by severity and winnability." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#14181d" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2314181d'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='600' fill='%23e8a33d' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../styles.css?v=2" />
+  <link rel="stylesheet" href="demo.css?v=1" />
+</head>
+<body>
+
+  <div class="demo-banner">Demonstration work product · Fictional project · Not legal advice</div>
+
+  <nav aria-label="Primary">
+    <a class="nav-brand" href="../../index.html">
+      <span class="nav-brand-name">Brownell <span>Energy Law</span></span>
+      <span class="nav-brand-tag">Full-Stack Counsel for the Power Sector</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../../catalog.html">Services &amp; Pricing</a></li>
+      <li><a href="../index.html">Sample Work</a></li>
+      <li><a class="nav-cta" href="../../index.html#contact">Start a Request</a></li>
+    </ul>
+  </nav>
+
+  <div class="doc-wrap">
+    <a class="doc-back" href="../index.html">← Back to the Meridian Ridge deliverable</a>
+    <div class="doc-sheet">
+
+      <div class="doc-head">
+        <span class="mono">03 · Picture — Risk Map</span>
+        <h1>Ten issues, one page</h1>
+        <p class="doc-meta">
+          Every material issue in the Granite Peak draft, plotted by how much it hurts
+          (severity, vertical) against how winnable the fix is (horizontal). Read it
+          in ten seconds: everything high-left gets fought hardest; everything
+          low-right gets traded.
+        </p>
+      </div>
+
+      <figure style="margin:0;">
+        <svg viewBox="0 0 720 480" role="img" aria-labelledby="rm-title rm-desc" style="width:100%;height:auto;">
+          <title id="rm-title">Risk map: severity versus winnability for ten PPA issues</title>
+          <desc id="rm-desc">Scatter plot. Issues 1 and 2 are critical severity; issues 3 through 6 high; 7 through 10 medium. Winnability ranges from hard-fought (left) to routinely conceded (right). The table below lists every point.</desc>
+
+          <!-- plot area -->
+          <rect x="70" y="20" width="620" height="380" fill="#faf8f4" stroke="#e3ded2" />
+          <!-- quadrant divider lines -->
+          <line x1="380" y1="20" x2="380" y2="400" stroke="#e3ded2" stroke-width="1" />
+          <line x1="70" y1="210" x2="690" y2="210" stroke="#e3ded2" stroke-width="1" />
+
+          <!-- quadrant labels -->
+          <text x="84" y="42" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1" fill="#6a7686">FIGHT HARDEST</text>
+          <text x="676" y="42" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1" fill="#6a7686">MUST-FIX, WINNABLE</text>
+          <text x="84" y="390" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1" fill="#6a7686">MONITOR / TRADE</text>
+          <text x="676" y="390" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1" fill="#6a7686">QUICK WINS</text>
+
+          <!-- axes labels -->
+          <text x="380" y="446" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="#414d5c">Winnability → (how routinely offtakers concede the fix)</text>
+          <text x="26" y="210" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="#414d5c" transform="rotate(-90 26 210)">Severity → (impact on value and financeability)</text>
+
+          <!-- data points: cx = winnability, cy = severity (top = worse). r=13, white ring for overlap separation -->
+          <!-- 1 Termination for convenience: sev critical, winn 3.0 -->
+          <g><circle cx="360" cy="60" r="13" fill="#641510" stroke="#fff" stroke-width="2"><title>1 · Termination for convenience (§11.2) — Critical · moderate fight</title></circle>
+             <text x="360" y="64" text-anchor="middle" font-family="Inter" font-size="12" font-weight="600" fill="#fff">1</text>
+             <text x="382" y="64" font-family="Inter" font-size="12" fill="#1b2129">Termination for convenience</text></g>
+          <!-- 2 Assignment: sev critical, winn 4.5 -->
+          <g><circle cx="580" cy="80" r="13" fill="#641510" stroke="#fff" stroke-width="2"><title>2 · Assignment blocks financing (§14.1) — Critical · routinely conceded</title></circle>
+             <text x="580" y="84" text-anchor="middle" font-family="Inter" font-size="12" font-weight="600" fill="#fff">2</text>
+             <text x="574" y="110" text-anchor="middle" font-family="Inter" font-size="12" fill="#1b2129">Assignment / financing</text></g>
+          <!-- 3 Credit support: sev high, winn 2.5 -->
+          <g><circle cx="290" cy="150" r="13" fill="#a03020" stroke="#fff" stroke-width="2"><title>3 · No credit support (§16) — High · hard fight</title></circle>
+             <text x="290" y="154" text-anchor="middle" font-family="Inter" font-size="12" font-weight="600" fill="#fff">3</text>
+             <text x="312" y="154" font-family="Inter" font-size="12" fill="#1b2129">Credit support</text></g>
+          <!-- 4 Output damages: sev high, winn 3.0 -->
+          <g><circle cx="370" cy="185" r="13" fill="#a03020" stroke="#fff" stroke-width="2"><title>4 · Uncapped output damages (§5.2) — High · moderate fight</title></circle>
+             <text x="370" y="189" text-anchor="middle" font-family="Inter" font-size="12" font-weight="600" fill="#fff">4</text>
+             <text x="392" y="189" font-family="Inter" font-size="12" fill="#1b2129">Output damages</text></g>
+          <!-- 5 COD deadline: sev high, winn 3.5 -->
+          <g><circle cx="440" cy="140" r="13" fill="#a03020" stroke="#fff" stroke-width="2"><title>5 · COD deadline and delay LDs (§3.4) — High</title></circle>
+             <text x="440" y="144" text-anchor="middle" font-family="Inter" font-size="12" font-weight="600" fill="#fff">5</text>
+             <text x="462" y="144" font-family="Inter" font-size="12" fill="#1b2129">COD deadline / LDs</text></g>
+          <!-- 6 Purchase option: sev high, winn 4.0 -->
+          <g><circle cx="530" cy="175" r="13" fill="#a03020" stroke="#fff" stroke-width="2"><title>6 · Buyer-priced purchase option (§12.3) — High · winnable</title></circle>
+             <text x="530" y="179" text-anchor="middle" font-family="Inter" font-size="12" font-weight="600" fill="#fff">6</text>
+             <text x="552" y="179" font-family="Inter" font-size="12" fill="#1b2129">Purchase option</text></g>
+          <!-- 7 Curtailment: sev med, winn 3.5 -->
+          <g><circle cx="440" cy="265" r="13" fill="#c4633a" stroke="#fff" stroke-width="2"><title>7 · Free curtailment (§6.1) — Medium</title></circle>
+             <text x="440" y="269" text-anchor="middle" font-family="Inter" font-size="12" font-weight="600" fill="#fff">7</text>
+             <text x="462" y="269" font-family="Inter" font-size="12" fill="#1b2129">Curtailment</text></g>
+          <!-- 8 Indemnity: sev med, winn 4.2 -->
+          <g><circle cx="555" cy="300" r="13" fill="#c4633a" stroke="#fff" stroke-width="2"><title>8 · One-way indemnity (§17.4) — Medium · easy give for Buyer</title></circle>
+             <text x="555" y="304" text-anchor="middle" font-family="Inter" font-size="12" font-weight="600" fill="#fff">8</text>
+             <text x="577" y="304" font-family="Inter" font-size="12" fill="#1b2129">Indemnity</text></g>
+          <!-- 9 Insurance: sev med-low, winn 4.5 -->
+          <g><circle cx="595" cy="345" r="13" fill="#c4633a" stroke="#fff" stroke-width="2"><title>9 · Insurance limits (§9.2) — Medium · quick win</title></circle>
+             <text x="595" y="349" text-anchor="middle" font-family="Inter" font-size="12" font-weight="600" fill="#fff">9</text>
+             <text x="573" y="372" text-anchor="middle" font-family="Inter" font-size="12" fill="#1b2129">Insurance</text></g>
+          <!-- 10 Change of law: sev med, winn 2.5 -->
+          <g><circle cx="290" cy="320" r="13" fill="#c4633a" stroke="#fff" stroke-width="2"><title>10 · Change-of-law risk (§21.7) — Medium · hard fight</title></circle>
+             <text x="290" y="324" text-anchor="middle" font-family="Inter" font-size="11" font-weight="600" fill="#fff">10</text>
+             <text x="312" y="324" font-family="Inter" font-size="12" fill="#1b2129">Change of law</text></g>
+        </svg>
+      </figure>
+
+      <div class="legend-row" role="list" aria-label="Severity legend">
+        <span><span class="legend-dot" style="background:#641510;"></span> Critical — financing blocker</span>
+        <span><span class="legend-dot" style="background:#a03020;"></span> High — material value at risk</span>
+        <span><span class="legend-dot" style="background:#c4633a;"></span> Medium — negotiate, don't lose the deal over it</span>
+      </div>
+      <p class="chart-note">
+        Winnability reflects how routinely offtakers concede the market-standard fix.
+        Issue 2 (assignment) is the most instructive point on the map: maximum
+        severity, but the most routinely conceded fix in the market — which is why it
+        leads Round 1.
+      </p>
+
+      <h2>The same map as a table</h2>
+      <div class="table-scroll">
+      <table class="doc-table">
+        <tr><th>#</th><th>Issue</th><th>Clause</th><th>Severity</th><th>Winnability</th></tr>
+        <tr><td>1</td><td>Termination for convenience</td><td>§ 11.2</td><td><span class="sev sev-critical">Critical</span></td><td>Moderate fight</td></tr>
+        <tr><td>2</td><td>Assignment blocks financing</td><td>§ 14.1</td><td><span class="sev sev-critical">Critical</span></td><td>Routinely conceded</td></tr>
+        <tr><td>3</td><td>No credit support</td><td>§ 16</td><td><span class="sev sev-high">High</span></td><td>Hard fight</td></tr>
+        <tr><td>4</td><td>Uncapped output damages</td><td>§ 5.2</td><td><span class="sev sev-high">High</span></td><td>Moderate fight</td></tr>
+        <tr><td>5</td><td>COD deadline / delay LDs</td><td>§ 3.4</td><td><span class="sev sev-high">High</span></td><td>Moderate</td></tr>
+        <tr><td>6</td><td>Buyer-priced purchase option</td><td>§ 12.3</td><td><span class="sev sev-high">High</span></td><td>Winnable</td></tr>
+        <tr><td>7</td><td>Free curtailment</td><td>§ 6.1</td><td><span class="sev sev-medium">Medium</span></td><td>Moderate</td></tr>
+        <tr><td>8</td><td>One-way indemnity</td><td>§ 17.4</td><td><span class="sev sev-medium">Medium</span></td><td>Easy give</td></tr>
+        <tr><td>9</td><td>Insurance limits</td><td>§ 9.2</td><td><span class="sev sev-medium">Medium</span></td><td>Quick win</td></tr>
+        <tr><td>10</td><td>Change-of-law risk</td><td>§ 21.7</td><td><span class="sev sev-medium">Medium</span></td><td>Hard fight</td></tr>
+      </table>
+      </div>
+
+      <p class="doc-meta" style="margin-top:24px; border-top:1px solid var(--line); padding-top:16px;">
+        DEMONSTRATION WORK PRODUCT for a fictional project. In a paid engagement this
+        page ships as a one-page PDF alongside the memo, sized for printing and
+        board-book insertion.
+      </p>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">Brownell Energy Law</div>
+      <p><a href="../../index.html">Home</a> · <a href="../index.html">Sample Work</a> · <a href="../../catalog.html">Services &amp; Pricing</a></p>
+      <div class="footer-disclaimer">
+        <p>
+          ATTORNEY ADVERTISING. Demonstration materials on this page concern a
+          fictional project and are provided to illustrate deliverable format only;
+          they are not legal advice. An attorney-client relationship is formed only by
+          a signed engagement letter following a completed conflicts check.
+        </p>
+        <p style="margin-top:10px;">© 2026 Brownell Energy Law. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

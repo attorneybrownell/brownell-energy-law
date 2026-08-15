@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Negotiation Runbook — Meridian Ridge Demo | Brownell Energy Law</title>
+  <meta name="description" content="Demonstration negotiation runbook for the fictional Meridian Ridge Solar PPA review: issue-by-issue asks, fallbacks, walk-away lines, owners, and status." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#14181d" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2314181d'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='600' fill='%23e8a33d' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../styles.css?v=2" />
+  <link rel="stylesheet" href="demo.css?v=1" />
+</head>
+<body>
+
+  <div class="demo-banner">Demonstration work product · Fictional project · Not legal advice</div>
+
+  <nav aria-label="Primary">
+    <a class="nav-brand" href="../../index.html">
+      <span class="nav-brand-name">Brownell <span>Energy Law</span></span>
+      <span class="nav-brand-tag">Full-Stack Counsel for the Power Sector</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../../catalog.html">Services &amp; Pricing</a></li>
+      <li><a href="../index.html">Sample Work</a></li>
+      <li><a class="nav-cta" href="../../index.html#contact">Start a Request</a></li>
+    </ul>
+  </nav>
+
+  <div class="doc-wrap" style="max-width:1040px;">
+    <a class="doc-back" href="../index.html">← Back to the Meridian Ridge deliverable</a>
+    <div class="doc-sheet">
+
+      <div class="doc-head">
+        <span class="mono">05 · Runbook — Negotiation Tracker</span>
+        <h1>The negotiation, as a checklist</h1>
+        <p class="doc-meta">
+          One row per issue: what we're asking for, where we'd settle, where we'd
+          walk, who owns it, and where it stands. Your deal lead runs the negotiation
+          from this table — no legal training required. In a paid engagement this
+          ships as a live spreadsheet updated after every round.
+        </p>
+      </div>
+
+      <div class="table-scroll">
+      <table class="doc-table">
+        <tr>
+          <th>#</th><th>Issue · Clause</th><th>Round</th><th>Our ask</th><th>Fallback</th><th>Walk-away</th><th>Owner</th><th>Status</th>
+        </tr>
+        <tr>
+          <td>1</td><td>Termination for convenience · § 11.2 <span class="sev sev-critical">Critical</span></td>
+          <td>1</td>
+          <td>Delete the right, or replace payment with year-by-year termination value exhibit</td>
+          <td>Right exercisable only after year 10 at exhibit TV, 12 months' notice</td>
+          <td>No TV schedule = no deal</td>
+          <td>Counsel</td><td>Counterproposal drafted</td>
+        </tr>
+        <tr>
+          <td>2</td><td>Assignment / financing · § 14.1 <span class="sev sev-critical">Critical</span></td>
+          <td>1</td>
+          <td>Carve-outs for lenders, tax equity, affiliates; consent &amp; estoppel covenant</td>
+          <td>"Not unreasonably withheld" — carve-outs preserved verbatim</td>
+          <td>No financing carve-outs = no deal</td>
+          <td>Counsel</td><td>Counterproposal drafted</td>
+        </tr>
+        <tr>
+          <td>3</td><td>Credit support · § 16 <span class="sev sev-high">High</span></td>
+          <td>1</td>
+          <td>Parent guaranty (all payment obligations) or 12-month evergreen LC</td>
+          <td>Guaranty capped at 24 months + TV, with downgrade-to-LC trigger</td>
+          <td>Unrated shell with nothing behind it = no deal</td>
+          <td>CFO + Counsel</td><td>Counterproposal drafted</td>
+        </tr>
+        <tr>
+          <td>4</td><td>Output damages · § 5.2 <span class="sev sev-high">High</span></td>
+          <td>2</td>
+          <td>P90 basis · 0.5%/yr degradation · rolling 2-yr measurement · 10% annual cap · 100% price</td>
+          <td>Single-year measurement with degradation curve, weather adjustment, and cap</td>
+          <td>No cap = escalate to board before conceding</td>
+          <td>Counsel + Asset Mgmt</td><td>Ready for Round 2</td>
+        </tr>
+        <tr>
+          <td>5</td><td>COD deadline / LDs · § 3.4 <span class="sev sev-high">High</span></td>
+          <td>2</td>
+          <td>18-month COD · 90-day grace · utility &amp; equipment delay = force majeure · termination only at 12 months late</td>
+          <td>14 months kept, day-for-day utility-delay extension, 60-day grace</td>
+          <td>Utility delay must be excused — strict liability for the utility's timeline is untenable</td>
+          <td>Counsel + Dev Team</td><td>Ready for Round 2</td>
+        </tr>
+        <tr>
+          <td>6</td><td>Purchase option · § 12.3 <span class="sev sev-high">High</span></td>
+          <td>2</td>
+          <td>First date year 10 · three-appraiser FMV · floor at greater of FMV / TV schedule</td>
+          <td>Year-7 date kept with appraisal mechanism and floor</td>
+          <td>Buyer's-appraiser-decides is the walk-away element</td>
+          <td>Counsel</td><td>Ready for Round 2</td>
+        </tr>
+        <tr>
+          <td>7</td><td>Curtailment · § 6.1 <span class="sev sev-medium">Medium</span></td>
+          <td>2</td>
+          <td>200 free hrs/yr, then deemed generation at contract price</td>
+          <td>400 free hours with same mechanic</td>
+          <td>— (trade item)</td>
+          <td>Counsel</td><td>Ready for Round 2</td>
+        </tr>
+        <tr>
+          <td>8</td><td>Indemnity · § 17.4 <span class="sev sev-medium">Medium</span></td>
+          <td>2</td>
+          <td>Mutual indemnities; mutual consequential-damages waiver (LDs excepted)</td>
+          <td>—</td>
+          <td>— (standard concession; expect to win)</td>
+          <td>Counsel</td><td>Ready for Round 2</td>
+        </tr>
+        <tr>
+          <td>9</td><td>Insurance · § 9.2 <span class="sev sev-medium">Medium</span></td>
+          <td>3</td>
+          <td>$5M umbrella; additional insured on liability only; waiver of subrogation</td>
+          <td>$10M accepted if Buyer bears incremental premium</td>
+          <td>— (planned concession — trade for #3)</td>
+          <td>CFO</td><td>Held for Round 3</td>
+        </tr>
+        <tr>
+          <td>10</td><td>Change of law · § 21.7 <span class="sev sev-medium">Medium</span></td>
+          <td>3</td>
+          <td>Price reopener above 5% cost impact; property tax pass-through above baseline</td>
+          <td>Property-tax pass-through only</td>
+          <td>— (trade item)</td>
+          <td>Counsel + CFO</td><td>Held for Round 3</td>
+        </tr>
+      </table>
+      </div>
+
+      <h2>How your team uses this</h2>
+      <ul>
+        <li><strong>Before each call:</strong> the deal lead reviews the open rows for that round — asks and fallbacks are pre-authorized, so no mid-call improvisation.</li>
+        <li><strong>During:</strong> anything Buyer offers between "ask" and "fallback" can be accepted on the spot; anything below fallback gets parked, not rejected.</li>
+        <li><strong>After:</strong> counsel updates status and circulates the one-line delta. The board sees movement, not memos.</li>
+      </ul>
+
+      <p class="doc-meta" style="margin-top:24px; border-top:1px solid var(--line); padding-top:16px;">
+        DEMONSTRATION WORK PRODUCT for a fictional project. Not legal advice.
+        Companion documents: <a href="memo.html">issues memo</a> ·
+        <a href="deck.html">board deck</a> · <a href="heatmap.html">risk map</a> ·
+        <a href="audio.html">audio brief</a>.
+      </p>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">Brownell Energy Law</div>
+      <p><a href="../../index.html">Home</a> · <a href="../index.html">Sample Work</a> · <a href="../../catalog.html">Services &amp; Pricing</a></p>
+      <div class="footer-disclaimer">
+        <p>
+          ATTORNEY ADVERTISING. Demonstration materials on this page concern a
+          fictional project and are provided to illustrate deliverable format only;
+          they are not legal advice. An attorney-client relationship is formed only by
+          a signed engagement letter following a completed conflicts check.
+        </p>
+        <p style="margin-top:10px;">© 2026 Brownell Energy Law. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

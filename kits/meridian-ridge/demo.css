@@ -1,0 +1,204 @@
+/* Meridian Ridge demonstration deliverable — shared document chrome.
+   Loads after ../../styles.css; adds document-page layout + demo banner. */
+
+.demo-banner {
+  background: var(--amber);
+  color: var(--carbon);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .72rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 8px 16px;
+}
+
+.doc-wrap {
+  max-width: 860px;
+  margin: 48px auto 72px;
+  padding: 0 20px;
+}
+.doc-sheet {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 56px 64px;
+  box-shadow: 0 2px 14px rgba(20, 24, 29, .06);
+}
+@media (max-width: 700px) { .doc-sheet { padding: 32px 22px; } }
+
+.doc-back {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .74rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--amber-ink);
+  text-decoration: none;
+}
+.doc-back:hover { color: var(--carbon); }
+
+.doc-head {
+  border-bottom: 2px solid var(--carbon);
+  padding-bottom: 18px;
+  margin-bottom: 28px;
+}
+.doc-head .mono { color: var(--amber-ink); display: block; margin-bottom: 8px; }
+.doc-head h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 1.7rem;
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+.doc-meta {
+  font-size: .85rem;
+  color: var(--text-soft);
+}
+
+.doc-sheet h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 1.22rem;
+  margin: 34px 0 12px;
+  max-width: none;
+}
+.doc-sheet h3 { font-size: 1rem; font-weight: 600; margin: 22px 0 8px; }
+.doc-sheet p { margin-bottom: 13px; color: var(--text-dark); font-size: .95rem; }
+.doc-sheet ul, .doc-sheet ol { margin: 0 0 14px 22px; font-size: .95rem; }
+.doc-sheet li { margin-bottom: 6px; }
+
+.doc-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .86rem;
+  margin: 14px 0 22px;
+}
+.doc-table th {
+  text-align: left;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .68rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  border-bottom: 2px solid var(--carbon);
+  padding: 8px 10px 6px;
+}
+.doc-table td {
+  border-bottom: 1px solid var(--line);
+  padding: 9px 10px;
+  vertical-align: top;
+}
+.table-scroll { overflow-x: auto; }
+
+.sev {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .68rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 3px;
+  white-space: nowrap;
+  color: #fff;
+}
+.sev-critical { background: #641510; }
+.sev-high     { background: #a03020; }
+.sev-medium   { background: #c4633a; }
+
+.issue {
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--amber);
+  border-radius: 4px;
+  padding: 18px 20px;
+  margin-bottom: 16px;
+}
+.issue.crit { border-left-color: #641510; }
+.issue.high { border-left-color: #a03020; }
+.issue.med  { border-left-color: #c4633a; }
+.issue-head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+.issue-head h3 { margin: 0; }
+.issue-clause {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .72rem;
+  color: var(--text-soft);
+}
+.issue dt {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .66rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--amber-ink);
+  margin-top: 10px;
+}
+.issue dd { margin: 3px 0 0; font-size: .92rem; color: var(--text-dark); }
+
+/* ── Deck slides ─────────────────────────────────────────────── */
+.slide {
+  background: var(--carbon);
+  color: var(--paper);
+  border-radius: 6px;
+  aspect-ratio: 16 / 9;
+  min-height: 340px;
+  padding: 6% 7%;
+  margin: 0 auto 28px;
+  max-width: 960px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+@media (max-width: 700px) { .slide { aspect-ratio: auto; padding: 28px 22px; } }
+.slide .mono { color: var(--amber); margin-bottom: 12px; }
+.slide h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  color: var(--paper);
+  font-size: clamp(1.3rem, 2.6vw, 2rem);
+  margin: 0 0 16px;
+}
+.slide p, .slide li { color: rgba(240, 236, 228, .85); font-size: clamp(.85rem, 1.5vw, 1rem); }
+.slide ul { list-style: none; margin: 0; }
+.slide li { padding-left: 20px; position: relative; margin-bottom: 10px; }
+.slide li::before { content: "—"; position: absolute; left: 0; color: var(--amber); }
+.slide-num {
+  margin-top: auto;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .68rem;
+  color: rgba(240, 236, 228, .45);
+  text-align: right;
+}
+.slide-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+@media (max-width: 700px) { .slide-cols { grid-template-columns: 1fr; } }
+.slide-stat-num { font-family: 'Fraunces', serif; font-size: clamp(1.5rem, 3vw, 2.3rem); color: var(--amber-bright); }
+.slide-stat-label { font-size: .8rem; color: rgba(240, 236, 228, .65); }
+.slide-table { width: 100%; border-collapse: collapse; font-size: clamp(.72rem, 1.3vw, .88rem); }
+.slide-table th {
+  text-align: left; color: var(--amber); font-family: 'IBM Plex Mono', monospace;
+  font-size: .66rem; letter-spacing: .08em; text-transform: uppercase;
+  border-bottom: 1px solid var(--line-dark); padding: 6px 8px;
+}
+.slide-table td { border-bottom: 1px solid rgba(58, 67, 79, .6); padding: 7px 8px; color: rgba(240, 236, 228, .85); }
+
+/* ── Audio transcript ────────────────────────────────────────── */
+.turn { display: grid; grid-template-columns: 84px 1fr; gap: 14px; margin-bottom: 16px; }
+@media (max-width: 600px) { .turn { grid-template-columns: 1fr; gap: 2px; } }
+.speaker {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .7rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--amber-ink);
+  padding-top: 3px;
+}
+.turn p { margin: 0; }
+
+/* ── Heat map ────────────────────────────────────────────────── */
+.chart-note { font-size: .84rem; color: var(--text-soft); margin-top: 10px; }
+.legend-row { display: flex; gap: 18px; flex-wrap: wrap; margin: 12px 0 4px; font-size: .82rem; color: var(--text-mid); }
+.legend-row span { display: inline-flex; align-items: center; gap: 7px; }
+.legend-dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
