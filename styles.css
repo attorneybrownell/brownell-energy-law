@@ -1,0 +1,357 @@
+/* Brownell Energy Law — site styles
+   Visual system: carbon #14181d · current amber #e8a33d · paper #faf8f4
+   Fraunces (display) · Inter (body) · IBM Plex Mono (labels, prices) */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --carbon: #14181d;
+  --carbon-mid: #1e242c;
+  --carbon-soft: #2a323d;
+  --amber: #e8a33d;
+  --amber-bright: #f5b954;
+  --amber-ink: #8a5f14;      /* AA-contrast amber for text on light backgrounds */
+  --paper: #faf8f4;
+  --paper-dark: #f1ede4;
+  --white: #fff;
+  --text-dark: #1b2129;
+  --text-mid: #414d5c;
+  --text-soft: #6a7686;
+  --line: #e3ded2;
+  --line-dark: #3a434f;
+  --good: #2e6e4e;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--paper);
+  color: var(--text-dark);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; }
+a { color: inherit; }
+
+.mono {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .72rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+/* ── Nav ─────────────────────────────────────────────────────── */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: rgba(250, 248, 244, .93);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  padding: 15px 6vw;
+}
+.nav-brand { text-decoration: none; line-height: 1.2; }
+.nav-brand-name {
+  display: block;
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 1.12rem;
+  color: var(--carbon);
+}
+.nav-brand-name span { color: var(--amber-ink); }
+.nav-brand-tag {
+  display: block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .6rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+.nav-links {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  list-style: none;
+}
+.nav-links a {
+  text-decoration: none;
+  font-size: .88rem;
+  font-weight: 500;
+  color: var(--text-mid);
+}
+.nav-links a:hover { color: var(--carbon); }
+.nav-cta {
+  background: var(--carbon);
+  color: var(--paper) !important;
+  padding: 9px 18px;
+  border-radius: 3px;
+  font-weight: 600;
+}
+.nav-cta:hover { background: var(--carbon-soft); }
+@media (max-width: 860px) {
+  .nav-links { display: none; }
+}
+
+/* ── Hero ────────────────────────────────────────────────────── */
+.hero {
+  background:
+    linear-gradient(rgba(20, 24, 29, .96), rgba(20, 24, 29, .96)),
+    repeating-linear-gradient(90deg, transparent 0 79px, rgba(232, 163, 61, .35) 79px 80px),
+    repeating-linear-gradient(0deg, transparent 0 79px, rgba(232, 163, 61, .35) 79px 80px);
+  background-color: var(--carbon);
+  color: var(--paper);
+  padding: 96px 6vw 88px;
+  text-align: left;
+}
+.hero-inner { max-width: 880px; margin: 0 auto; }
+.hero-kicker {
+  color: var(--amber);
+  margin-bottom: 22px;
+}
+.hero h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: clamp(2.1rem, 5vw, 3.4rem);
+  line-height: 1.14;
+  margin-bottom: 24px;
+}
+.hero h1 em { font-style: italic; color: var(--amber-bright); }
+.hero-sub {
+  font-size: 1.08rem;
+  color: rgba(240, 236, 228, .82);
+  max-width: 640px;
+  margin-bottom: 36px;
+}
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: .95rem;
+  padding: 13px 26px;
+  border-radius: 3px;
+}
+.btn-amber { background: var(--amber); color: var(--carbon); }
+.btn-amber:hover { background: var(--amber-bright); }
+.btn-ghost { border: 1px solid var(--line-dark); color: var(--paper); }
+.btn-ghost:hover { border-color: var(--amber); color: var(--amber-bright); }
+
+.hero-stats {
+  display: flex;
+  gap: 44px;
+  flex-wrap: wrap;
+  margin-top: 56px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line-dark);
+}
+.hero-stat-num {
+  font-family: 'Fraunces', serif;
+  font-size: 1.9rem;
+  color: var(--amber-bright);
+}
+.hero-stat-label { font-size: .8rem; color: rgba(240, 236, 228, .65); }
+
+/* ── Sections ────────────────────────────────────────────────── */
+section { padding: 84px 6vw; }
+.section-inner { max-width: 1080px; margin: 0 auto; }
+.section-kicker { color: var(--amber-ink); margin-bottom: 14px; }
+h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: clamp(1.6rem, 3.4vw, 2.3rem);
+  line-height: 1.2;
+  margin-bottom: 18px;
+  max-width: 700px;
+}
+.section-lede { font-size: 1.05rem; color: var(--text-mid); max-width: 680px; margin-bottom: 44px; }
+.alt { background: var(--paper-dark); }
+
+/* ── Kit anatomy ─────────────────────────────────────────────── */
+.kit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 16px;
+}
+.kit-part {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--amber);
+  border-radius: 4px;
+  padding: 22px 20px;
+}
+.kit-part .mono { color: var(--amber-ink); display: block; margin-bottom: 10px; }
+.kit-part h3 { font-size: 1rem; font-weight: 600; margin-bottom: 8px; }
+.kit-part p { font-size: .86rem; color: var(--text-mid); }
+
+/* ── How it works ────────────────────────────────────────────── */
+.steps { counter-reset: step; display: grid; gap: 0; }
+.step {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 20px;
+  padding: 26px 0;
+  border-bottom: 1px solid var(--line);
+}
+.step:last-child { border-bottom: 0; }
+.step-num {
+  font-family: 'Fraunces', serif;
+  font-size: 1.7rem;
+  color: var(--amber-ink);
+}
+.step h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 6px; }
+.step p { font-size: .93rem; color: var(--text-mid); max-width: 620px; }
+
+/* ── Guarantee band ──────────────────────────────────────────── */
+.guarantee {
+  background: var(--carbon);
+  color: var(--paper);
+  text-align: center;
+  padding: 64px 6vw;
+}
+.guarantee h2 { margin: 0 auto 14px; color: var(--paper); }
+.guarantee p { max-width: 620px; margin: 0 auto; color: rgba(240, 236, 228, .8); }
+.guarantee .mono { color: var(--amber); display: block; margin-bottom: 16px; }
+
+/* ── Catalog cards ───────────────────────────────────────────── */
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 18px;
+}
+.kit-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 26px 24px;
+  display: flex;
+  flex-direction: column;
+}
+.kit-card h3 {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 1.18rem;
+  margin-bottom: 6px;
+}
+.kit-price {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .95rem;
+  color: var(--amber-ink);
+  margin-bottom: 12px;
+}
+.kit-card p { font-size: .9rem; color: var(--text-mid); margin-bottom: 14px; }
+.kit-card ul { list-style: none; margin-bottom: 16px; }
+.kit-card li {
+  font-size: .84rem;
+  color: var(--text-mid);
+  padding-left: 18px;
+  position: relative;
+  margin-bottom: 5px;
+}
+.kit-card li::before { content: "—"; position: absolute; left: 0; color: var(--amber); }
+.kit-turn {
+  margin-top: auto;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .7rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--good);
+}
+
+/* ── Capability pages / cards ────────────────────────────────── */
+.cap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 18px;
+}
+.cap-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 24px;
+  text-decoration: none;
+  display: block;
+}
+.cap-card:hover { border-color: var(--amber); }
+.cap-card h3 { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600; margin-bottom: 8px; }
+.cap-card p { font-size: .88rem; color: var(--text-mid); }
+.cap-card .mono { color: var(--amber-ink); display: block; margin-top: 14px; }
+
+.page-head {
+  background: var(--carbon);
+  color: var(--paper);
+  padding: 64px 6vw 56px;
+}
+.page-head-inner { max-width: 1080px; margin: 0 auto; }
+.page-head .section-kicker { color: var(--amber); }
+.page-head h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+.page-head p { color: rgba(240, 236, 228, .8); max-width: 660px; }
+
+.prose { max-width: 720px; }
+.prose h2 { font-size: 1.4rem; margin-top: 40px; }
+.prose p { margin-bottom: 16px; color: var(--text-mid); }
+.prose ul { margin: 0 0 16px 20px; color: var(--text-mid); }
+.prose li { margin-bottom: 6px; }
+
+/* ── About ───────────────────────────────────────────────────── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+@media (max-width: 820px) { .about-grid { grid-template-columns: 1fr; } }
+.about-grid p { color: var(--text-mid); margin-bottom: 14px; }
+.cred-list { list-style: none; }
+.cred-list li {
+  padding: 12px 0 12px 26px;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+  font-size: .92rem;
+  color: var(--text-mid);
+}
+.cred-list li::before { content: "▸"; position: absolute; left: 2px; color: var(--amber-ink); }
+
+/* ── Contact / CTA ───────────────────────────────────────────── */
+.contact { text-align: center; }
+.contact .section-inner { max-width: 640px; }
+.contact h2 { margin-left: auto; margin-right: auto; }
+
+/* ── Footer ──────────────────────────────────────────────────── */
+footer {
+  background: var(--carbon);
+  color: rgba(240, 236, 228, .6);
+  padding: 48px 6vw 36px;
+  font-size: .82rem;
+}
+.footer-inner { max-width: 1080px; margin: 0 auto; }
+.footer-brand {
+  font-family: 'Fraunces', serif;
+  font-size: 1.05rem;
+  color: var(--paper);
+  margin-bottom: 12px;
+}
+.footer-disclaimer {
+  border-top: 1px solid var(--line-dark);
+  margin-top: 24px;
+  padding-top: 20px;
+  font-size: .74rem;
+  line-height: 1.7;
+  max-width: 880px;
+}
+footer a { color: rgba(240, 236, 228, .8); }
