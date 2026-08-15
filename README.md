@@ -1,16 +1,19 @@
 # Brownell Energy Law
 
 Website for Brownell Energy Law — flat-fee legal counsel for the power sector,
-by Stephen Brownell. Every engagement ships as a **Counsel Kit**: the legal
-instrument plus a board deck, a one-page visualization, an audio brief, and an
-action runbook, delivered in two business days at a price published before the
-work starts.
+by Stephen Brownell. Services are named by output (PPA Review & Redline,
+Project Diligence Report, …) and come in two tiers: **First Cut** — the
+complete deliverable in two business days at a published fixed price — and
+**To Signature** — negotiation through an executed agreement, three rounds
+included. Every deliverable ships as **the Full Stack**: the legal instrument
+plus a board deck, a one-page visualization, an audio brief, and an action
+runbook.
 
 ## Structure
 
-- `index.html` — homepage: positioning, the Counsel Kit, how it works, guarantee, about
-- `catalog.html` — published kit catalog with fixed prices
-- `kits/` — sample kit gallery (demonstration kit for a fictional project)
+- `index.html` — homepage: positioning, the Full Stack, tiers, how it works, guarantee, about
+- `catalog.html` — services & pricing (First Cut / To Signature tiers)
+- `kits/` — sample work gallery (demonstration deliverable for a fictional project)
 - `solar-dg.html`, `storage.html`, `interconnection.html`, `tax-equity.html`,
   `construction.html`, `markets.html` — capability pages (solar/DG is the
   primary focus; the rest exist for full-sector coverage and SEO)
